@@ -12,11 +12,13 @@
     --color-tiktok: #00f2fe;
     --color-tiktok-accent: #fe0979;
     --color-discord: #5865F2;
+    --color-roblox: #ffffff;
     
     /* Neon Glows */
     --glow-youtube: 0 0 25px rgba(255, 0, 0, 0.5);
     --glow-tiktok: 0 0 25px rgba(0, 242, 254, 0.4), 0 0 25px rgba(254, 9, 121, 0.4);
     --glow-discord: 0 0 25px rgba(88, 101, 242, 0.5);
+    --glow-roblox: 0 0 25px rgba(255, 255, 255, 0.4);
     
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -314,6 +316,21 @@ body::after {
     transform: scale(1.15);
 }
 
+/* Roblox Button Hover */
+.btn-roblox:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: var(--glow-roblox);
+    transform: translateY(-3px);
+}
+.btn-roblox::before {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    opacity: 1;
+}
+.btn-roblox:hover .social-icon {
+    color: var(--color-roblox);
+    transform: scale(1.15);
+}
+
 /* Toast Notification for Clipboard Copy */
 .toast-notification {
     position: fixed;
@@ -351,6 +368,7 @@ body::after {
 .links-wrapper a:nth-child(1) { animation: itemEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
 .links-wrapper a:nth-child(2) { animation: itemEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
 .links-wrapper a:nth-child(3) { animation: itemEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+.links-wrapper a:nth-child(4) { animation: itemEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0; }
 
 @keyframes itemEntrance {
     0% {
